@@ -1,0 +1,1459 @@
+x = 2
+while x <= 10:
+    print x
+    x+=2
+print 'Goodbye!'
+
+print "Hello"
+x = 10
+while x > 0:
+    print x
+    x-=2
+
+num = 13
+print "Hello"
+while num > 1:
+    num-=1
+    if num%2==0:
+        print num
+
+end=6
+total= 0
+x = 1
+while x <=end:
+    total = total + x
+    x+=1
+print total
+
+for num in range(1,101):
+    for i in range(2,num):
+        if(num%i==0):
+            break
+        else:
+            print(num)
+            break
+
+for num in range(2,10):
+    prime = True
+    for i in range(2,num):
+        if(num%i==0):
+            prime = False
+    if prime:
+        print num
+
+for num in range(1,3):
+    for i in range(1,5):
+        num = num + i
+        print num
+
+for num in range(1,10):
+    for i in range(2, num):
+        print i
+x=1
+while x<7:
+    x = x +1
+    print x
+
+
+num = 256
+result = 0
+while num > 0:
+    result = str(num%2) + str(result)
+    num = num/2
+print result
+
+myStr = '6.00x'
+for numbers in myStr:
+    print numbers
+print 'done'
+
+greeting = 'Hello!'
+count = 0
+
+for letter in greeting:
+    count += 1
+    if count % 2 == 0:
+        print letter
+    print letter
+print 'done'
+
+school = 'Massachusetts Instituteof Technology'
+numVowels = 0
+numCons = 0
+
+for char in school:
+    if char == 'a' or char == 'e' or char == 'i' \
+       or char == 'o' or char == 'u':
+        numVowels += 1
+    elif char == 'o' or char =='M':
+        print char
+    else:
+        numCons -= 1
+
+print 'numVowels is: ' + str(numVowels)
+print 'numCons is: ' + str(numCons)
+
+num = 19
+if num < 0:
+    isNeg = True
+    num = abs(Num)
+else:
+    isNeg =False
+result = ''
+if num ==0:
+    rusult = '0'
+while num > 0:
+    result = str(num%2) + result
+    num = num/2
+if isNeg:
+    result = '-' + result
+print result
+
+
+x = 25
+epsilon = 0.00
+step = 0.5
+numGuesses = 0
+ans = 0.00
+while (abs(ans**2-x))>=epsilon and ans <=x:
+    ans+=step
+    numGuesses+=1
+print ('numGuesses = ' + str(numGuesses))
+if abs(ans**2-x)>=epsilon:
+    print ('Failed on square root of ' + str(x))
+else:
+    print (str(ans) + ' is close to the square root of ' + str(x))
+
+
+x = 25
+epsilon = 0.01
+numGuesses = 0
+low = 0.0
+high = x
+ans =(high + low)/2.0
+while (abs(ans**2-x))>=epsilon and ans <=x:
+    print ('low = ' + str(low) + 'high = ' + str(high) + 'ans = ' + str(ans))
+    numGuesses+=1
+    if ans**2<x:
+        low = ans
+    else:
+        high = ans
+    ans = (high + low)/2.0
+    
+print ('numGuesses = ' + str(numGuesses))
+print (str(ans) + ' is close to the square root of ' + str(x))
+
+
+iteration = 0
+count = 0
+while iteration < 1:
+    for letter in "hello, world":
+        count +=  1
+    print "Iteration " + str(iteration) + "; count is: " + str(count)
+    iteration += 1
+
+count = 0
+for letter in "hello, world":
+    count +=  1
+    print str(count)
+
+iteration = 0
+count = 0
+while iteration < 3:
+    for letter in "hello, world":
+        count += 1
+    print ("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1
+
+
+iteration = 0
+while iteration < 5:
+    count = 0
+	
+    for letter in "hello, world":
+        count += 1
+
+    print ("Iteration " + str(iteration) + "; count is: " + str(count) + "Letter " + str(letter))
+    iteration += 1
+
+iteration = 0
+while iteration < 5:
+    count = 0
+    for letter in "hello, world":
+        count += 1
+    if iteration % 2 == 0:
+            break
+    print ("Iteration " + str(iteration) + "; count is: " + str(count))
+    iteration += 1
+
+
+for numbers in range(2,12,2):
+    print numbers
+print "Goodbye!"
+
+print "Hello"
+for numbers in range (10, 0, -2):
+    print numbers
+
+end = 6
+total = 0
+for numbers in range(1,7):
+    total = total+ numbers
+    print total
+    
+iteration = 0
+while iteration < 5:
+    count = 0
+    for letter in "hello, world":
+        count += 1
+        if iteration % 2 == 0:
+            break
+    print "Iteration " + str(iteration) + "; count is: " + str(count)
+    iteration += 1     
+
+for iteration in range(5):
+    count = 0
+    while True:
+        for letter in "hello, world":
+            count += 1
+        print "Iteration " + str(iteration) + "; count is: " + str(count)
+
+for iteration in range(5):
+    count = 0
+    while True:
+        for letter in "hello, world":
+            count += 1
+        print "Iteration " + str(iteration) + "; count is: " + str(count)
+        break
+
+count = 0
+phrase = "hello, world"
+for iteration in range(5):
+    count = 0
+    phrase = "hello, world"
+    while True:
+        count += len(phrase)
+        break
+    print ("Iteration " + str(iteration) + "; count is: " + str(count))
+
+num = 10
+while num > 3:
+    num-=1
+    print num
+print 'Outside of loop'
+print num
+
+num = 10
+while num > 3:
+    print num
+    num-=1
+print 'Outside of loop'
+print num
+
+num = 0
+while num <= 5:
+    print num
+    num+=1
+print 'outside of loop'
+print num
+
+num = 1
+while num < 5:
+    num+=1
+    print num
+print 'outside of loop'
+print num
+
+num = 10
+while True:
+    if num < 7:
+        print 'breaking out of loop'
+        break
+    print num
+    num-=1
+print num
+
+
+num = 10
+while not False:
+    if num < 7:
+        break
+    print num
+    num-=1
+print num
+
+num = 10
+while True:
+    if num < 7:
+        print 'breaking out of loop'
+        break
+    num-=1
+    print num
+print num
+
+
+studentnames = open("C:\\Users\\Justice\\OneDrive\\Documents\\Lekki Epe cong.txt", "r")
+Friends = []
+for line in studentnames:
+    stripped_line = line.strip()
+    line_list = stripped_line
+    Friends.append(line_list)
+
+studentnames.close()
+for p in Friends:
+    print (p)
+
+importdatetime
+class Person(object):
+def__init__(self, name):
+"""create a person called name"""
+self.name= name
+self.birthday= None
+self.lastName= name.split(' ')[-1]
+defgetLastName(self):
+"""return self's last name"""
+returnself.lastName
+# other methods
+def__str__(self):
+"""return self's name"""
+returnself.name
+
+importdatetime
+class Person(object):
+def__init__(self, name):
+"""create a person called name"""
+self.name= name
+self.birthday= None
+self.lastName= name.split(' ')[-1]
+defsetBirthday(self,month,day,year):
+"""sets self's birthday to birthDate"""
+self.birthday= datetime.date(year,month,day)
+defgetAge(self):
+"""returns self's current age in days"""
+ifself.birthday== None:
+raiseValueError
+return(datetime.date.today() -self.birthday).days
+# other methods
+
+importdatetime
+class Person(object):
+def__init__(self, name):
+"""create a person called name"""
+self.name= name
+self.birthday= None
+self.lastName= name.split(' ')[-1]
+def__lt__(self, other):
+"""return True if self's ameis lexicographically
+less than other's name, and False otherwise"""
+ifself.lastName== other.lastName:
+returnself.name< other.name
+returnself.lastName< other.lastName
+# other methods
+def__str__(self):
+"""return self's name"""
+returnself.name
+
+classMITPerson(Person):
+nextIdNum= 0 # next ID number to assign
+def__init__(self, name):
+Person.__init__(self, name) # initialize Person attributes
+# new MITPersonattribute: a unique ID number
+self.idNum= MITPerson.nextIdNum
+MITPerson.nextIdNum+= 1
+defgetIdNum(self):
+returnself.idNum
+# sorting MIT people uses their ID number, not name!
+def__lt__(self, other):
+returnself.idNum< other.idNum
+
+
+classUG(MITPerson):
+def__init__(self, name, classYear):
+MITPerson.__init__(self, name)
+self.year= classYear
+defgetClass(self):
+returnself.year
+classGrad(MITPerson):
+pass
+defisStudent(obj):
+returnisinstance(obj,UG) orisinstance(obj,Grad)
+
+classUG(MITPerson):
+def__init__(self, name, classYear):
+MITPerson.__init__(self, name)
+self.year= classYear
+defgetClass(self):
+returnself.year
+classGrad(MITPerson):
+pass
+class TransferStudent(MITPerson):
+pass
+defisStudent(obj):
+returnisinstance(obj,UG) orisinstance(obj,Grad)
+
+
+class Student(MITPerson):
+pass
+classUG(Student):
+def__init__(self, name, classYear):
+MITPerson.__init__(self, name)
+self.year= classYear
+defgetClass(self):
+returnself.year
+classGrad(Student):
+pass
+class TransferStudent(Student):
+pass
+defisStudent(obj):
+returnisinstance(obj,Student)
+
+ for n in range(10):
+	value = listn.pop(0)
+	listn.insert(3, value)
+	print (value)
+
+for n in range(10):
+	value = BibleRead.pop(0)
+	BibleRead.insert(len(BibleRead, value))
+	print (value,"will do Bible reading")
+
+text = 'The sum of 7 and 9 is [7 + 9].'
+
+import fileinput, re
+field_pat = re.compile(r'\[(.+?)\]')
+scope = {}
+def replacement(match):
+    code = match.group(1)
+    try:
+        return str(eval(code, scope))
+    except SyntaxError:
+        exec (code in scope)
+    return ''
+    lines = []
+    for line in fileinput.input():
+        lines.append(line)
+    text = ''.join(lines)
+print (field_pat.sub(replacement, text))
+
+import datetime
+class Person(object):
+    def __init__(self, name):
+        """create a person called name"""
+        self.name = name
+        self.birthday = None
+        self.lastName = name.split(' ')[-1]
+    def setBirthday(self,month,day,year):
+        """sets self's birthday to birthDate"""
+        self.birthday = datetime.date(year,month,day)
+    def getAge(self):
+        """returns self's current age in days"""
+        if self.birthday == None:
+            raise ValueError
+        return(datetime.date.today()- self.birthday).days
+    def __lt__(self, other):
+        """return True if self's ameis lexicographically
+        less than other's name, and False otherwise"""
+        if self.lastName == other.lastName:
+            return self.name < other.name
+        return self.lastName < other.lastName
+
+    def __str__(self):
+        """return self's name"""
+        return self.name
+    
+
+# class Student:
+# 	NextID = 0
+# 	def __init__(self, name):
+# 		self.name = name
+# 		self.IdNum = Student.NextID
+# 		Student.NextID += 1
+# 	def GetId(self):
+# 		return self.IdNum
+# 	def Getname(self):
+# 		return self.name
+# 	def __str__(self):
+# 		return self.name
+
+
+
+# stu = ['AGBAMU HARVEST',
+# 'AGBAMU HAVILAH',
+# 'IGHAVODHA AMBER',
+# 'IGHAVODHA ANNABEL']
+
+# for s in stu:
+# 	username = (s.split()[-1])[0:3]
+# 	f = zip(username, s)
+# 	mydict = dict(f)
+# 	# x = 'username = Student(s)'
+# 	# exec(x)
+
+# print (mydict)
+# import datetime
+# class Person(object):
+#     def __init__(self, name):
+#         """create a person called name"""
+#         self.name = name
+#         self.birthday = None
+#         self.lastName = name.split(' ')[-1]
+#     def setBirthday(self,month,day,year):
+#         """sets self's birthday to birthDate"""
+#         self.birthday = datetime.date(year,month,day)
+#     def getAge(self):
+#         """returns self's current age in days"""
+#         if self.birthday == None:
+#             raise ValueError
+#         return(datetime.date.today()- self.birthday).days
+#     def __lt__(self, other):
+#         """return True if self's ameis lexicographically
+#         less than other's name, and False otherwise"""
+#         if self.lastName == other.lastName:
+#             return self.name < other.name
+#         return self.lastName < other.lastName
+
+#     def __str__(self):
+#         """return self's name"""
+#         return self.name
+
+# class MITPerson(Person):
+# 	nextIdNum = 0 # next ID number to assign
+# 	def __init__(self, name):
+# 		Person.__init__(self, name) # initialize Person attributes
+# 		# new MITPersonattribute: a unique ID number
+# 		self.idNum = MITPerson.nextIdNum
+# 		MITPerson.nextIdNum += 1
+# 	def getIdNum(self):
+# 		return self.idNum
+# 		# sorting MIT people uses their ID number, not name!
+# 	def __lt__(self, other):
+# 		return self.idNum < other.idNum
+
+# class Student(MITPerson):
+# 	pass
+
+# class UG(Student):
+# 	def __init__(self, name, classYear):
+# 		MITPerson.__init__(self, name)
+# 		self.year = classYear
+# 	def getClass(self):
+# 		return self.year
+
+# class Grad(Student):
+# 	pass
+# class TransferStudent(Student):
+# 	pass
+# def isStudent(obj):
+# 	return isinstance(obj,Student)	
+
+
+
+
+
+# class Grades(object):
+# 	"""A mapping from students to a list of grades"""
+# 	def __init__(self):
+# 		"""Create empty grade book"""
+# 		self.students = [] # list of Student objects
+# 		self.grades = {} # maps idNum-> list of grades
+# 		self.isSorted = True# true if self.studentsis sorted
+# 	def addStudent(self, student):
+# 		"""Assumes: student is of type Student
+# 		Add student to the grade book"""
+# 		if student in self.students:
+# 			raiseValueError('Duplicate student')
+# 		self.students.append(student)
+# 		self.grades[student.getIdNum()] = []
+# 		self.isSorted = False
+
+# 	def addGrade(self, student, grade):
+# 		"""Assumes: grade is a float
+# 		Add grade to the list of grades for student"""
+# 		try:
+# 			self.grades[student.getIdNum()].append(grade)
+# 		except KeyError:
+# 			raise ValueError('Student not in grade book')
+# 	def getGrades(self, student):
+# 		"""Return a list of grades for student"""
+# 		try: # return copy of student's grades
+# 			return self.grades[student.getIdNum()][:]
+# 		except KeyError:
+# 			raise ValueError('Student not in grade book')
+
+# 	def allStudents(self):
+# 		"""Return a list of the students in the grade book"""
+# 		if not self.isSorted:
+# 			self.students.sort()
+# 		self.isSorted = True
+# 		return self.students[:]
+
+# def gradeReport(course):
+# 	"""Assumes: course if of type grades"""
+# 	report = []
+# 	for s in course.allStudents():
+# 		tot = 0
+# 		numGrades = 0
+# 	for g in course.getGrades(s):
+# 		tot += g
+# 		numGrades += 1
+# 	try:
+# 		average = tot / numGrades
+# 		report.append(str(s) + ' \'s mean grade is ' + str(average))
+# 	except ZeroDivisionError:
+# 		report.append(str(s) + ' has no grades')
+# 	return '\n'.join(report)
+
+
+# ug1 = UG('Jane Doe', 2014)
+# ug2 = UG('John Doe', 2015)
+# ug3 = UG('David Henry', 2003)
+# g1 = Grad('John Henry')
+# g2 = Grad('George Steinbrenner')
+# six00 = Grades()
+# six00.addStudent(g1)
+# six00.addStudent(ug2)
+# six00.addStudent(ug1)
+# six00.addStudent(g2)
+
+# for s in six00.allStudents():
+# 	six00.addGrade(s, 75)
+# six00.addGrade(g1, 100)
+# six00.addGrade(g2, 25)
+# six00.addStudent(ug3)
+
+
+# print(gradeReport(six00))
+# def flatten(nested):
+# 	try:
+# 		for sublist in nested:
+# 			for element in flatten(sublist):
+# 				yield element
+# 	except TypeError:
+# 		yield nested
+
+# print(list(flatten(["hello, world"])))
+# print (list(flatten([1,2,[3],7])))
+# list(flatten([[[1],2],3,4,[5,[6,7]],8]))
+# def flatten(nested):
+# 	try:
+# 		try:
+# 			nested + ''
+# 		except TypeError: pass
+# 		else: raise TypeError
+# 		for sublist in nested:
+# 			for element in flatten(sublist):
+# 				yield element
+# 	except TypeError:
+# 		yield nested
+# # print(list(flatten(["hello, world"])))
+# print(list(flatten([1,2,[3,4],'world'])))
+
+# def conflict(state, nextX):
+# 	nextY = len(state)
+# 	for i in range(nextY):
+# 		if abs(state[i] - nextX) in (0, nextY - i):
+# 			return True
+# 	return False
+
+# def queens(num, state):
+# 	if len(state) == num - 1:
+# 		for pos in range(num):
+# 			if not conflict(state, pos):
+# 				yield pos
+
+# def queens(num=8, state=()):
+# 	for pos in range(num):
+# 		if not conflict(state, pos):
+# 			if len(state) == num-1:
+# 				yield(pos,)
+# 			else:
+# 				for result in queens(num, state + (pos,)):
+# 					yield (pos,) + result
+# print(list(queens(4, ())))
+
+# class Location(object):
+# 	def __init__(self, x, y):
+# 		self.x = x
+# 		self.y = y
+
+# 	def move(self, deltaX, deltaY):
+# 		return Location(self.x + deltaX, self.y + deltaY)
+
+# 	def getX(self):
+# 		return self.x
+
+# 	def getY(self):
+# 		return self.y
+
+# 	def distFrom(self, other):
+# 		ox = other.x
+# 		oy = other.y
+# 		XDist = self.x - ox
+# 		YDist = self.y - oy
+# 		return (XDist**2 + YDist**2)**0.5
+
+# 	def __str__(self):
+# 		return "<" + str(self.x) + "," + str(self.y) + ">"
+
+
+
+# class Field(object):
+# 	def __init__(self):
+# 		self.drunks = {}
+
+# 	def addDrunk(self, drunk, loc):
+# 		if drunk in self.drunks:
+# 			raise ValueError("Duplicate drunk")
+# 		else:
+# 			self.drunks[drunk] = loc
+
+# 	def moveDrunk(self, drunk):
+# 		if not drunk in self.drunks:
+# 			raise ValueError("Drunk not in field")
+# 		XDist, YDist = drunk.takeStep()
+# 		currentLocation = self.drunks[drunk]
+# 		self.drunks[drunk] = currentLocation.move(XDist, YDist)
+
+# 	def getLoc(self, drunk):
+# 		if not drunk in self.drunks:
+# 			raiseValueError("Drunk not in field")
+# 		return self.drunks[drunk]
+
+
+# class Drunk(object):
+# 	def __init__(self, name):
+# 		self.name = name
+# 	def __str__(self):
+# 		return "This drunk is named " + self.name
+
+# import random
+
+# class UsualDrunk(Drunk):
+# 	def takeStep(self):
+# 		stepChoices = [(0.0, 1.0), (0.0, -1.0), (1.0, 0.0), (-1.0, 0.0)]
+# 		return random.choice(stepChoices)
+
+
+
+# def walk(f, d, numSteps):
+# 	start = f.getLoc(d)
+# 	for s in range(numSteps):
+# 		f.moveDrunk(d)
+# 	return(start.distFrom(f.getLoc(d)))
+
+# def simwalks(numSteps, numTrials):
+# 	homor = UsualDrunk("Homor")
+# 	origin = Location(0,0)
+# 	distances = []
+# 	for t in range(numTrials):
+# 		f = Field()
+# 		f.addDrunk(homor, origin)
+# 		distances.append(walk(f, homor, numSteps))
+# 	return distances
+
+# def drunkTest(numTrials = 10):
+# 	for numSteps in [10, 100, 1000, 10000]:
+# 		distances = simwalks(numSteps, numTrials)
+# 		print(" Random walk of " + str(numSteps) + " steps")
+# 		print(" mean = " , sum(distances)/len(distances))
+# 		print(" max = " , max(distances), "min =", min(distances))
+
+# g = drunkTest()
+# print(g)
+
+# text = 'The sum of 7 and 9 is [7 + 9].'
+# text = 'The sum of 7 and 9 is [7 + 9]\n[name = "Mr. Gumby"]Hello, [name]\
+# \nWhere is [name]'
+
+# import fileinput, re
+# field_pat = re.compile(r'\[(.+?)\]')
+# scope = {}
+# def replacement(sir):
+#     code = sir.group(1)
+#     try:
+#         return str(eval(code, scope))
+#     except SyntaxError:
+#         exec (code, scope)
+#     return ''
+#     lines = []
+#     for line in fileinput.input():
+#         lines.append(line)
+#     text = ''.join(lines)
+# print (field_pat.sub(replacement, text))
+
+
+class binaryTree(object):
+	def __init__(self, value):
+		self.value = value
+		self.leftBranch = None
+		self.rightBranch = None
+		self.parent = None
+	def setLeftBranch(self, node):
+		self.leftBranch = node
+	def setRightBranch(self, node):
+		self.rightBranch = node
+	def setParent(self, parent):
+		self.parent = parent
+	def getValue(self):
+		return self.value
+	def getLeftBranch(self):
+		return self.leftBranch
+	def getRightBranch(self):
+		return self.rightBranch
+	def getParent(self):
+		return self.parent
+	def __str__(self):
+		return (self.value)
+
+n5 = binaryTree(5)
+n2 = binaryTree(2)
+n1 = binaryTree(1)
+n4 = binaryTree(4)
+n8 = binaryTree(8)
+n6 = binaryTree(6)
+n7 = binaryTree(7)
+n5.setLeftBranch(n2)
+n2.setParent(n5)
+n5.setRightBranch(n8)
+n8.setParent(n5)
+n2.setLeftBranch(n1)
+n1.setParent(n2)
+n2.setRightBranch(n4)
+n4.setParent(n2)
+n8.setLeftBranch(n6)
+n6.setParent(n8)
+n6.setRightBranch(n7)
+n7.setParent(n6)
+
+# def find6(node):
+# 	node.getValue() == 10:
+# 		return True
+# 	else: return false	
+# def find6(no):
+# 	if no == 6:
+# 		return True
+# 	else: return False
+
+
+def find6(node):
+	return node.getValue() == 6
+
+def lt6(node):
+	return node.getValue() > 6
+
+# def DFSBinary(root, fcn):
+# 	stack = [root]
+# 	while len(stack) > 0:
+# 		if fcn(stack[0]):
+# 			return True
+# 		else:
+# 			temp = stack.pop(0)
+# 		if temp.getRightBranch():
+# 			stack.insert(0, temp.getRightBranch())
+# 		if temp.getLeftBranch():
+# 			stack.insert(0, temp.getLeftBranch())
+# 	return False
+
+# # # print (n7)
+# print(DFSBinary(n5, find6))
+
+# def BFSBinary(root):
+# 	queue = [root]
+# 	while len(queue) > 0:
+# 		if find6(queue[0]):
+# 			return True
+# 		else:
+# 			temp = queue.pop(0)
+# 		if temp.getLeftBranch():
+# 			queue.append(temp.getLeftBranch())
+# 		if temp.getRightBranch():
+# 			queue.append(temp.getRightBranch())
+# 	return False
+
+# print(BFSBinary(n6))
+
+# def BFSBinary(root, fcn):
+# 	queue = [root]
+# 	while len(queue) > 0:
+# 		if fcn(queue[0]):
+# 			return True
+# 		else:
+# 			temp = queue.pop(0)
+# 		if temp.getLeftBranch():
+# 			queue.append(temp.getLeftBranch())
+# 		if temp.getRightBranch():
+# 			queue.append(temp.getRightBranch())
+# 	return False
+
+# print(BFSBinary(n5,find6))
+
+# def TracePath(node):
+# 	if not node.getParent():
+# 		return[node]
+# 	else:
+# 		return[node] + TracePath(node.getParent())
+
+
+
+# def DFSBinaryPath(root, fcn):
+# 	stack = [root]
+# 	while len(stack) > 0:
+# 		if fcn(stack[0]):
+# 			return TracePath(stack[0])
+# 		else:
+# 			temp = stack.pop(0)
+# 			if temp.getRightBranch():
+# 				stack.insert(0, temp.getRightBranch())
+# 			if temp.getLeftBranch():
+# 				stack.insert(0, temp.getLeftBranch())
+# 	return False
+
+
+
+# foo = DFSBinaryPath(n5,find6)
+# print([e.getValue() for e in foo])
+
+
+# for e in foo:
+# 	print(e.getValue())
+
+
+#foo = print(DFSBinaryPath(n5,find6))
+
+
+
+
+
+# def DFSBinaryOrdered(root, fcn, ltFcn):
+# 	stack = [root]
+# 	while len(stack) > 0:
+# 		if fcn(stack[0]):
+# 			return True
+# 		elif ltFcn(stack[0]):
+# 			temp = stack.pop(0)
+# 		if temp.getLeftBranch():
+# 			stack.insert(0, temp.getLeftBranch())
+# 		else:
+# 			if temp.getRightBranch():
+# 				stack.insert(0, temp.getRightBranch())
+# 	return False
+
+
+
+def buildDTree(sofar, todo):
+	if len(todo) == 0:
+		return binaryTree(sofar)
+	else:
+		withelt = buildDTree(sofar + [todo[0]], todo[1:])
+		withoutelt = buildDTree(sofar, todo[1:])
+		here = binaryTree(sofar)
+		here.setLeftBranch(withelt)
+		here.setRightBranch(withoutelt)
+	return here
+
+def DFSDTree(root, valueFcn, constraintFcn):
+	stack = [root]
+	best = None
+	visited = 0
+	while len(stack) > 0:
+		visited += 1
+		if constraintFcn(stack[0].getValue()):
+			if best == None:
+				best = stack[0]
+			elif valueFcn(stack[0].getValue()) > valueFcn(best.getValue()):
+				best = stack[0]
+			temp = stack.pop(0)
+			if temp.getRightBranch():
+				stack.insert(0, temp.getRightBranch())
+			if temp.getLeftBranch():
+				stack.insert(0, temp.getLeftBranch())
+		else:
+			stack.pop(0)
+
+	print ('visited', visited)
+	return best
+
+
+
+
+
+# def BFSDTree(root, valueFcn, constraintFcn):
+# 	queue = [root]
+# 	best = None
+# 	visited = 0
+# 	while len(queue) > 0:
+# 		visited += 1
+# 	if constraintFcn(queue[0].getValue()):
+# 		if best == None:
+# 			best = queue[0]
+# 	elif valueFcn(queue[0].getValue()) > valueFcn(best.getValue()):
+# 		best = queue[0]
+# 	temp = queue.pop(0)
+# 	if temp.getLeftBranch():
+# 		queue.append(temp.getLeftBranch())
+# 	if temp.getRightBranch():
+# 		queue.append(temp.getRightBranch())
+# 	else:
+# 		queue.pop(0)
+# 	print('visited', visited)
+# 	return best
+
+a = [6,3]
+b = [7,2]
+c = [8,4]
+d = [9,5]
+# lst = [a,b,c,d]
+
+treeTest = buildDTree([], [a,b,c,d])
+
+
+def sumValues(lst):
+	vals = [e[0] for e in lst]
+	return sum(vals)
+
+def WeightsBelow10(lst):
+	wts = [e[1] for e in lst]
+	return sum(wts) <= 10
+
+
+foo = DFSDTree(treeTest,sumValues,WeightsBelow10)
+print(foo.getValue())
+
+# BFSDTree(treeTest, sumValues, WeightsBelow10)
+
+# def DFSDTreeGoodEnough(root, valueFcn, constraintFcn, stop):
+# 	stack = [root]
+# 	best = None
+# 	visited = 0
+# 	while len(stack) > 0:
+# 		visited += 1
+# 		if constraintFcn(stack[0].getValue()):
+# 			if best == None:
+# 				best = stack[0]
+# 		elif valueFcn(stack[0].getValue()) > valueFcn(best.getValue()):
+# 			best = stack[0]
+# 		if stop(best.getValue()):
+# 			return best
+# 		temp = stack.pop(0)
+# 		if temp.getRightBranch():
+# 			queue.insert(0, temp.getRightBranch())
+# 		if temp.getLeftBranch():
+# 			queue.insert(0, temp.getLeftBranch())
+# 		else:
+# 			stack.pop(0)
+# 		print ('visited', visited)
+# 	return best
+
+# def BFSDTreeGoodEnough(root, valueFcn, constraintFcn, stop):
+# 	queue = [root]
+# 	best = None
+# 	visited = 0
+# 	while len(queue) > 0:
+# 		visited += 1
+# 		if constraintFcn(queue[0].getValue()):
+# 			if best == None:
+# 				best = queue[0]
+# 		elif valueFcn(queue[0].getValue()) > valueFcn(best.getValue()):
+# 			best = queue[0]
+# 		if stop(best.getValue()):
+# 			returnbest
+# 		temp = queue.pop(0)
+# 		if temp.getLeftBranch():
+# 			queue.append(temp.getLeftBranch())
+# 		if temp.getRightBranch():
+# 			queue.append(temp.getRightBranch())
+# 		else:
+# 			queue.pop(0)
+# 		print ('visited', visited)
+# 	return best
+
+# def atLeast15(lst):
+# 	return sumValues(lst) >= 15
+# print ('DFS')
+
+# depth = DFSDTreeGoodEnough(treeTest, sumValues, WeightsBelow10, atLeast15)
+# print ('BFS')
+# breadth = BFSDTreeGoodEnough(treeTest, sumValues, WeightsBelow10, atLeast15)
+
+# def DTImplicit(toConsider, avail):
+# 	# return value of solution, and solution
+# 	if toConsider == [] or avail == 0:
+# 		result = (0, ())
+# 	elif toConsider[0][1] > avail:
+# 		result = DTImplicit(toConsider[1:], avail)
+# 	else:
+# 		nextItem = toConsider[0]
+# 	withVal, withToTake = DTImplicit(toConsider[1:], avail -nextItem[1])
+# 	withVal += nextItem[0]
+# 	withoutVal, withoutToTake = DTImplicit(toConsider[1:], avail)
+# 	if withVal > withoutVal:
+# 		result = (withVal, withToTake + (nextItem,))
+# 	else:
+# 		result = (withoutVal, withoutToTake)
+# 	return result
+
+# def DFSBinaryNoLoop(root, fcn):
+# 	stack = [root]
+# 	seen = []
+# 	while len(stack) > 0:
+# 		print ('at node ' + str(queue[0].getValue()))
+# 	if fcn(stack[0]):
+# 		return True
+# 	else:
+# 		temp = stack.pop(0)
+# 	seen.append(temp)
+# 	if temp.getRightBranch():
+# 		if not temp.getRightBranch() in seen:
+# 			stack.insert(0, temp.getRightBranch())
+# 	if temp.getLeftBranch():
+# 		if not temp.getLeftBranch() in seen:
+# 			stack.insert(0, temp.getLeftBranch())
+# 	return False
+
+ width = int(input('Please enter width: '))
+ price_width = 10
+ item_width = width - price_width
+ header_format = '%-*s%*s'
+ testfor = '%-*s%*.2f'
+ print ('=' * width)
+ print (header_format % (item_width, 'Item', price_width, 'Price'))
+ print ('-' * width)
+ print (testfor % (item_width, 'Apples', price_width, 0.4))
+ print (testfor % (item_width, 'Pears', price_width, 0.5))
+ print (testfor % (item_width, 'Cantaloupes', price_width, 1.92))
+ print (testfor % (item_width, 'Dried Apricots (16 oz.)', price_width, 8))
+ print (testfor % (item_width, 'Prunes (4 lbs.)', price_width, 12))
+ print ('=' * width)
+
+ class Bird:
+ 	def __init__(self):
+ 		self.hungry = True
+ 	def eat(self):
+ 		if self.hungry:
+ 			print ('Aaaah...')
+ 			self.hungry = False
+ 		else:
+ 			print ('No, thanks!')
+
+ b = Bird()
+ b.eat()
+ b.eat()
+
+ class SongBird(Bird):
+ 	def __init__(self):
+ 		Bird.__init__(self)
+ 		self.sound = 'Squawk!'
+ 	def sing(self):
+ 		print (self.sound)
+
+ sb = SongBird()
+ sb.sing()
+ sb.eat()
+
+ class Bird:
+ 	def __init__(self):
+ 		self.hungry = True
+ 	def eat(self):
+ 		if self.hungry:
+ 			print ('Aaaah...')
+ 			self.hungry = False
+ 		else:
+ 			print ('No, thanks!')
+ class SongBird(Bird):
+ 	def __init__(self):
+ 		super(SongBird, self).__init__()
+ 		self.sound = 'Squawk!'
+ 	def sing(self):
+ 		print (self.sound)
+ sb = SongBird()
+ sb.sing()
+ sb.eat()
+ sb.eat()
+
+ def checkIndex(key):
+ # ''Is the given key an acceptable index?
+ # To be acceptable, the key should be a non-negative integer. If it
+ # is not an integer, a TypeError is raised; if it is negative, an
+ # IndexError is raised (since the sequence is of infinite length).''
+
+ if not isinstance(key, (int, long)): raise TypeError
+ if key < 0: raise IndexError
+
+ class ArithmeticSequence:
+ 	def __init__(self, start=0, step=1):
+ # ''
+ # Initialize the arithmetic sequence.
+ # start - the first value in the sequence
+ # step - the difference between two adjacent values
+ # changed - a dictionary of values that have been modified by
+ # the user
+ # ''
+ 	self.start = start # Store the start value
+ 	self.step = step # Store the step value
+ 	self.changed = {} # No items have been modified
+ def __getitem__(self, key):
+ 	"""
+ 	Get an item from the arithmetic sequence.
+ 	"""
+ 	checkIndex(key)
+ 	try: return self.changed[key] # Modified?
+ 	except KeyError: # otherwise...
+ 		return self.start + key*self.step # ...calculate the value
+ def __setitem__(self, key, value):
+ 	"""
+ 	Change an item in the arithmetic sequence.
+ 	"""
+ 	checkIndex(key)
+ 	self.changed[key] = value # Store the changed value
+ s = ArithmeticSequence(1,2)
+ s[4]
+
+ Friends = [
+ 'AGBAMU HARMONY',
+ 'AGBAMU HARVEST',
+ 'AGBAMU HAVILAH',
+ 'AGBAMU PATIENCE',
+ 'AKLASSOU ABIGAIL',
+ 'AKLASSOU ADJO KAFUI',
+ 'AKLASSOU GODWIN',
+ 'AMAEFULA EBERECHI',
+ 'AMAEFULA KINGSLEY',
+ 'ANDREW INNOCENT',
+ 'ANDREW PRICILLA',
+ 'ASHADE FUNKE',
+ 'BARAK ANDRESON',
+ 'DEDEKIMOR ESTHER',
+ 'IGBIYA CONFIDENCE',
+ 'IGBIYA OGHENETEJIRI',
+ 'IGHAVODHA ABEL',
+ 'IGHAVODHA AMBER',
+ 'IGHAVODHA ANNABEL',
+ 'IGHAVODHA DOREEN',
+ 'IWUANORUO JUSTICE',
+ 'JOHNSON WISDOM',
+ 'KUPOLATI EBERE',
+ 'KUPOLATI OMONIYI',
+ 'MAINA JOHN',
+ 'MBA PRISCILLA',
+ 'OBARAH GRACE',
+ 'OGBONNAYA FREDRICK',
+ 'OKON LOVE',
+ 'OLUWASEYI ABEL',
+ 'OLUWASEYI BLESSING',
+ 'ONOJA CHIAMAKA',
+ 'ONOJA FRIDAY',
+ 'ONOJA OJOMA',
+ 'ORIKI ISRAEL',
+ 'SMART JOEGODSON',
+ 'UCHEAGWU DAVID',
+ 'UDOH GLORY EZEKIEL',
+ 'UGORJI POLYCARP',
+ 'VARE EVANS']
+
+ BibleRead = [
+ 'AGBAMU HARMONY',
+ 'BARAK ANDRESON',
+ 'MAINA JOHN',
+ 'ONOJA FRIDAY',
+ 'ORIKI ISRAEL',
+ 'SMART JOEGODSON',
+ 'UGORJI POLYCARP']
+
+ Initial = [
+ 'AGBAMU HARVEST',
+ 'AGBAMU HAVILAH',
+ 'IGHAVODHA AMBER',
+ 'IGHAVODHA ANNABEL']
+
+ Return = [
+ 'AGBAMU PATIENCE',
+ 'AMAEFULA EBERECHI',
+ 'DEDEKIMOR ESTHER',
+ 'IGBIYA CONFIDENCE',
+ 'IGHAVODHA DOREEN',
+ 'KUPOLATI EBERE',
+ 'MBA PRISCILLA',
+ 'OBARAH GRACE',
+ 'OKON LOVE',
+ 'OLUWASEYI BLESSING',
+ 'ONOJA CHIAMAKA',
+ 'ONOJA OJOMA',
+ 'UDOH GLORY EZEKIEL']
+
+ Talk = [
+ 'AMAEFULA KINGSLEY',
+ 'JOHNSON WISDOM',
+ 'OLUWASEYI ABEL',
+ 'UGORJI POLYCARP']
+
+ MayJune = {
+ "Week 1":
+ ['Bible Reading',
+ 'Initial Call',
+ 'Talk'],
+ 'Week 2':
+ ['Bible Reading',
+ 'Return Visit',
+ 'Return Visit'],
+ "Week 3":
+ ['Bible Reading',
+ 'Talk'],
+ "Week 4":
+ ['Bible Reading',
+ 'Initial Call',
+ 'Return Visit',
+ 'Bible Study'],
+ "Week 5":
+ ['Bible Reading',
+ 'Initial Call',
+ 'Return Visit',
+ 'Talk'],
+ "Week 6":
+ ['Bible Reading',
+ 'Bible Study'],
+ "Week 7":
+ ['Bible Reading',
+ 'Initial Call'
+ 'Return Visit'
+ 'Bible Study'],
+ "Week 8":
+ ['Bible Reading',
+ 'Initial Call',
+ 'Return Visit',
+ 'Talk'],
+ "Week 9":
+ ['Bible Reading',
+ 'Initial Call',
+ 'Bible Study']
+ }
+
+
+ sys.path.append("C:/Users/Justice/AppData\Local/Programs/Python/Python39/Python")
+
+ AGBAMU HARMONY
+ AGBAMU HARVEST
+ AGBAMU HAVILAH
+ AGBAMU PATIENCE
+ AKLASSOU ABIGAIL
+ AKLASSOU ADJO KAFUI
+ AKLASSOU GODWIN
+ AMAEFULA EBERECHI
+ AMAEFULA KINGSLEY
+ ANDREW INNOCENT
+ ANDREW PRICILLA
+ ASHADE FUNKE
+ BARAK ANDRESON
+ DEDEKIMOR ESTHER
+ IGBIYA CONFIDENCE
+ IGBIYA OGHENETEJIRI
+ IGHAVODHA ABEL
+ IGHAVODHA AMBER
+ IGHAVODHA ANNABEL
+ IGHAVODHA DOREEN
+ IWUANORUO JUSTICE
+ JOHNSON WISDOM
+ KUPOLATI EBERE
+ KUPOLATI OMONIYI
+ MAINA JOHN
+ MBA PRISCILLA
+ OBARAH GRACE
+ OGBONNAYA FREDRICK
+ OKON LOVE
+ OLUWASEYI ABEL
+ OLUWASEYI BLESSING
+ ONOJA CHIAMAKA
+ ONOJA FRIDAY
+ ONOJA OJOMA
+ ORIKI ISRAEL
+ SMART JOEGODSON
+ UCHEAGWU DAVID
+ UDOH GLORY EZEKIEL
+ UGORJI POLYCARP
+ VARE EVANS
+
+ AGBAMU HARMONY
+ BARAK ANDRESON
+ MAINA JOHN
+ ONOJA FRIDAY
+ ORIKI ISRAEL
+ SMART JOEGODSON
+ UGORJI POLYCARP
+
+ AGBAMU HARVEST
+ AGBAMU HAVILAH
+ IGHAVODHA AMBER
+ IGHAVODHA ANNABEL
+
+ AGBAMU PATIENCE
+ AMAEFULA EBERECHI
+ DEDEKIMOR ESTHER
+ IGBIYA CONFIDENCE
+ IGHAVODHA DOREEN
+ KUPOLATI EBERE
+ MBA PRISCILLA
+ OBARAH GRACE
+ OKON LOVE
+ OLUWASEYI BLESSING
+ ONOJA CHIAMAKA
+ ONOJA OJOMA
+ UDOH GLORY EZEKIEL
+
+ AMAEFULA KINGSLEY
+ JOHNSON WISDOM
+ OLUWASEYI ABEL
+ UGORJI POLYCARP
+
+ weeks = []
+ for i in range(1,10):
+ 	weeks.append('Week '+str(i))
+ print(weeks)
+
+
+ text = ''
+ import re
+ file = open(r'C:\Users\Justice\Downloads\march1.txt')
+ for line in file:
+ 	text += line
+ pat = r'(Bible Reading.+).+[\d] .{4}\) (.+) (.+)'
+
+ # f = (re.match(pat, text))
+ # g = f.group(0)
+ # print(g)
+ # import re
+ # text = 'python and perl'
+ # pat = 'p(ython|erl)'
+ f = (re.findall(pat, text))
+ bib = zip(weeks, f)
+ # print (f)
+ ReadingAss = dict(bib)
+ print(ReadingAss)
+
+ def find6(node):
+ 	re node.getValue() == 6:
+ 		# print ("at node",node)
+ 		return True
+
+ 	# else: print("at node", node)
+ # 	return False
+ a = [6,3]
+ b = [7,2]
+ c = [8,4]
+ d = [9,5]
+ treeTest = buildTree([], [a,b,c,d])
+ def sumValues(lst)
+
+ f = [a,b,c]
+ foo = [e[0] for e in f]
+ print (sum(foo))
+a = [2,3,4]
+
+def sumValues(me):
+	vals = [e for e in lst]
+	print(vals)
+	return sum(vals)
+
+
+
+
+
+
