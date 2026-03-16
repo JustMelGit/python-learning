@@ -535,30 +535,30 @@
 # print(rodCutting(length,price,8,8))
 
 
-# def Locate(t,k,memo,n):
-# 	if memo[n][k] != float('inf'):
-# 		return memo[n][k]
-# 	if len(t) == 1 and k >= 1:
-# 		return 0
-# 	if k == 1:
-# 		memo[n][k] = (t[len(t)-1]-t[0])/2
-# 		return memo[n][k]
+def Locate(t,k,memo,n):
+	if memo[n][k] != float('inf'):
+		return memo[n][k]
+	if len(t) == 1 and k >= 1:
+		memo[n][k] = 0
+		return memo[n][k]
+	if k == 1:
+		memo[n][k] = (t[-1]-t[0])/2
+		return memo[n][k]
 	
-# 	c = float('inf')
-# 	for x in range(len(t)-1):
-# 		c = min(c,max((t[x]-t[0])/2,Locate(t[x+1:],k-1,memo,x)))
-# 		memo[x][k] = c
-# 	print(memo)
-# 	return c
+	c = float('inf')
+	for x in range(len(t)-1):
+		c = min(c,max((t[x]-t[0])/2,Locate(t[x+1:],k-1,memo,n-(x+1))))
+		memo[n][k] = c
+	print(memo)
+	return c
 
-# k = 2
-# to = [1,3,6,7]
-# n = len(to)
+k = 3
+to = [1,3,6,7]
+n = len(to)
+memo = [[float('inf') for j in range(k+1)] for j in range(n+1)]
+print(Locate(to,k,memo,n))
 
-# memo = [[float('inf') for j in range(k+1)] for j in range(n+1)]
-# # print(memo)
 
-# print(Locate(to,k,memo,n))
 
 # def Locate(t,k):
 # 	if len(t) == 1 and k >= 1:
