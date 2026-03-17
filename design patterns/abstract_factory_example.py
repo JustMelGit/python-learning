@@ -1,46 +1,54 @@
+from abc import ABC, abstractmethod
+
+# Abstract Factory
+class PetFactory(ABC):
+    @abstractmethod
+    def get_pet(self):
+        pass
+
+    @abstractmethod
+    def get_food(self):
+        pass
+
+# Concrete Products
 class Dog:
-	"""One of the objects to be returned"""
+    def speak(self):
+        return "woof"
 
-	def speak(self):
-		return "woof"
+    def __str__(self):
+        return "Dog"
 
-	def __str__(self):
-		return "Dog"
+class Cat:
+    def speak(self):
+        return "meow"
 
-class DogFactory:
-	"""Concrete Factory"""
+    def __str__(self):
+        return "Cat"
 
-	def get_pet(self):
-		"""Returns a Dog object"""
-		return Dog()
+# Concrete Factories
+class DogFactory(PetFactory):
+    def get_pet(self):
+        return Dog()
 
+    def get_food(self):
+        return "Dog Food"
 
-	def get_food(self):
-		"""Returns a Dog food object"""
-		return "Dog Food"
+class CatFactory(PetFactory):
+    def get_pet(self):
+        return Cat()
 
+    def get_food(self):
+        return "Cat Food"
+
+# Client
 class PetStore:
-	""" PetStore houses our Abstract Factory"""
+    def __init__(self, factory: PetFactory):
+        self.factory = factory
 
-	def __init__(self,pet_factory=None):
-		""" Pet factory is our abstract factory """
-		self._pet_factory = pet_factory
-
-	def show_pet(self):
-		""" Utility method to display the details of the objects return"""
-		pet = self._pet_factory.get_pet()
-		pet_food = self._pet_factory.get_food()
-
-		print("Our pet is '{}!'".format(pet))
-		print("Our pet says hello by '{}'".format(pet.speak()))
-		print("Its food is '{}'".format(pet_food))
-
-
-#create a concrete factory
-factory = DogFactory()
-
-#creat a pet store housing our abstract factory
-shop = PetStore(factory)
-
-#Invoke the utility method to show the details our pet
-shop.show_pet()
+    def get_pet_info(self):
+        pet = self.factory.get_pet()
+        return {
+            "type": str(pet),
+            "sound": pet.speak(),
+            "food": self.factory.get_food()
+        }
