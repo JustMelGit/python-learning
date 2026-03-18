@@ -16,7 +16,6 @@ class JsonSerializer:
     def to_str(self):
         return json.dumps(self._current_object)
 
-
 class XmlSerializer:
     def __init__(self):
         self._element = None
@@ -31,15 +30,11 @@ class XmlSerializer:
     def to_str(self):
         return et.tostring(self._element, encoding='unicode')
 
-
-
 class ObjectSerializer:
     def serialize(self, serializable, format):
         serializer = factory.get_serializer(format)
         serializable.serialize(serializer)
         return serializer.to_str()
-
-
 
 class Song:
     def __init__(self, song_id, title, artist):
@@ -51,8 +46,6 @@ class Song:
         serializer.start_object('song', self.song_id)
         serializer.add_property('title', self.title)
         serializer.add_property('artist', self.artist)
-
-
 
 class SerializerFactory:
 
@@ -72,8 +65,6 @@ class SerializerFactory:
 factory = SerializerFactory()
 factory.register_format('JSON', JsonSerializer)
 factory.register_format('XML', XmlSerializer)
-
-
 
 song = Song('1', 'Water of Love', 'Dire Straits')
 serializer = ObjectSerializer()
