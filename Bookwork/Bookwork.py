@@ -50,41 +50,14 @@ class doc(object):
 
 
 
-def scripExtSpace(aStr):
+def strip_extra_space(aStr):
 	"""Takes a string with multiple
 	spaces inbetween and returns a string
-	with single space"""
-	i = 0
-	line = ''
-	space = False
-	aStr = aStr.strip()
-	while i<len(aStr):
-		for e in aStr:
-			i+=1
-			if e !=' ':
-				if not space:
-					line+=e
-				else:
-					line = line + ' ' + e
-					space = False
-			else:
-				space = True
+	with single space eg 'how   are  you  joy  ."""
+	import re
+	line = ' '.join(aStr.split())
+	line = re.sub(r'\s+([.,!?])', r'\1',line)
 	return line
-
-
-
-
-
-fi = r'C:\Users\gnl999935\Documents\schedule1.txt'
-
-
-schedule = doc(fi)
-
-pat = r'\d+/\d+/\d+'
-for e in schedule.getBlocks(pat):
-	print(e)
-	print()
-
 
 
 
